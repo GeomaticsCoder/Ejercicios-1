@@ -1,129 +1,69 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+#NOTA: TODOS LOS PROBLEMAS SE DESARROLLARON EN PYCHARM.
 
-# C extensions
-*.so
+#PROBLEMA_0#
+# Cree una tupla con las vocales en mayuscula y minuscula, luego una variable que almacene una frase larga que contenga mayusculas y minusculas.
+# Utilice los conocimientos adquiridos para indicar: el tamaño total de la frase, cuantas letras "a" y "u" existen en la frase
+# recorrer la frase letra a letra indicando por pantalla si la letra es o no es vocal
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+las_vocales = ["A", "E", "I", "O", "U", "a", "e", "i", "o", "u"]
+frase_larga = "If You Want To Overcome The World, Overcome YourSelf"
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+print(len(frase_larga))
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
+print(frase_larga.count("a"))
 
-# Translations
-*.mo
-*.pot
+print(frase_larga.count("u"))
 
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
 
-# Flask stuff:
-instance/
-.webassets-cache
+contador = 0
+for i in frase_larga:
+    if i in las_vocales:
+        print("Es una vocal")
+    else:
+        print("No es una vocal")
 
-# Scrapy stuff:
-.scrapy
+    contador+=1
+    
 
-# Sphinx documentation
-docs/_build/
 
-# PyBuilder
-target/
+#PROBLEMA_1#
 
-# Jupyter Notebook
-.ipynb_checkpoints
+#Realiza un programa que lea dos números por teclado y permita elegir entre 3 opciones en un menú:
+#●	Mostrar una suma de los dos números (1)
+#●	Mostrar una resta de los dos números (el primero menos el segundo) (2)
+#●	Mostrar una multiplicación de los dos números (3)
+#●	Mostrar una division de los dos numeros (el primero entre el segundo, si el 2do es 0 alertar q no es correcta)
+#En caso de introducir una opción inválida, el programa informará de que no es correcta.
 
-# IPython
-profile_default/
-ipython_config.py
 
-# pyenv
-.python-version
+x = float(input("Por favor, introducir primer numero: "))
+operador = input("Inserte que operación desea realizar: ")
+y = float(input("por favor, introducir segundo número: "))
 
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
 
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
 
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
+if operador == "+":
+    print(x + y)
 
-# SageMath parsed files
-*.sage.py
+elif operador == "-":
+    print(x - y)
 
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+elif operador == "*":
+    print( x * y)
 
-# Spyder project settings
-.spyderproject
-.spyproject
+elif operador == "/":
+    if y != 0:
+        print (x / y)
+    else:
+        print ("No es correcto, inténtelo nuevamente")
 
-# Rope project settings
-.ropeproject
 
-# mkdocs documentation
-/site
+else:
+    "Opción Invalida. Intente Nuevamente"
 
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
+print("Gracias por utilizar este servicio :)")
 
-# Pyre type checker
-.pyre/
+
+
+
